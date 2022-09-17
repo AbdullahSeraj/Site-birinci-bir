@@ -1,0 +1,654 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+:root {
+    --main-color : #10cab7 ;
+    --sec-color : #2c4755
+}
+
+body {
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/****************************  header  *******************************/
+
+.header {
+    padding: 20px ;
+
+
+}
+
+.header .nav {
+    margin: 0 auto ;
+    padding: 0 10px ;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+
+}
+
+.header .nav .logo {
+    width: 60px ;
+}
+
+.header .nav .links {
+    position: relative;
+
+
+}
+
+.header .nav .links:hover ul {
+    display: block;
+}
+
+.header .nav .links:hover .sekil span:nth-child(2) {
+    width: 100% ;
+
+}
+
+.header .nav .links .sekil {
+    width: 30px ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+}
+
+.header .nav .links .sekil span {
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 2px ;
+
+}
+
+.header .nav .links .sekil span:first-child {
+    width: 100% ;
+
+}
+
+.header .nav .links .sekil span:nth-child(2) {
+    width: 60% ;
+    transition: .2s ;
+
+}
+
+.header .nav .links .sekil span:last-child {
+    width: 100%;
+
+
+}
+
+.header .nav .links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 ;
+    position: absolute;
+    right: 0;
+    background-color: #CCC ;
+    width: 150px ;
+    top: calc(100% + 15px) ;
+    display: none;
+    z-index: 1;
+
+}
+
+.header .nav .links ul::before {
+    content: "" ;
+    position: absolute;
+    border-width: 10px ;
+    border-style: solid;
+    border-color: transparent transparent #CCC transparent;
+    top: -20px ;
+    right: 5px ;
+}
+
+.header .nav .links ul li a {
+    display: block;
+    padding: 15px ;
+    text-decoration: none;
+    color: #333;
+    transition: .3s ;
+
+
+}
+
+.header .nav .links ul li:hover a {
+    padding-left: 25px ;
+}
+
+.header .nav .links ul li:not(:last-child) a {
+    border-bottom: black solid 2px ;
+
+
+}
+
+/*****************************  dag-header **************************/
+
+.dag-header {
+    background-image: url("../images/dag1.jpg");
+    /*height: 100vh;*/
+    height: calc(100vh - 63.98px) ;
+    background-size: cover ;
+
+    position: relative;
+
+}
+
+.dag-header .dag-nav {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    width: 320px ;
+
+
+}
+
+.dag-header .dag-nav h1 {
+    margin: 0 ;
+    padding: 0 ;
+    color : var(--main-color) ;
+    display: flex;
+    justify-content: center;
+    line-height: 1.9;
+    font-size: 35px ;
+    max-width: 100% ;
+
+}
+
+.dag-header .dag-nav p {
+    font-size: 15px ;
+    line-height: 1.9 ;
+    text-align: center ;
+
+}
+
+/*********************************  kisimlar *************************************/
+
+
+.kisimlar-header {
+    padding: 60px 20px ;
+    background-color: #F3f3f3;
+
+}
+
+.kisimlar-header .nav {
+    margin: auto;
+    display: grid ;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    grid-gap: 20px ;
+
+}
+
+.kisimlar-header .nav .kucuk-kismi {
+    padding: 20px ;
+    text-align: center;
+
+}
+
+.kisimlar-header .nav .kucuk-kismi i {
+    font-size: 30px ;
+    color: var(--main-color);
+
+}
+
+.kisimlar-header .nav .kucuk-kismi h3 {
+    font-weight: 800 ;
+}
+
+.kisimlar-header .nav .kucuk-kismi p {
+    color: #797979;
+    line-height: 1.8 ;
+
+}
+
+/*************************************  birinci  ************************************/
+
+.birinci {
+    text-align: center;
+    padding-top: 60px ;
+
+}
+
+.birinci .nav {
+    margin: auto auto 100px auto ;
+
+
+}
+
+.birinci .nav h2 {
+    margin: 0 0 -30px 0 ;
+    font-size: 100px ;
+    color: #f6f6f6 ;
+
+
+}
+
+@media (max-width: 750px ) {
+    .birinci .nav h2 {
+        font-size: 60px ;
+    }
+}
+
+.birinci .nav p {
+    margin: -20px 0 0 0 ;
+    color: #797979;
+
+
+}
+
+.birinci-nav1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    grid-gap: 30px ;
+    margin-top: 50px ;
+    padding: 20px ;
+
+}
+
+.birinci-nav1 .col {
+    text-align: left ;
+
+}
+
+.birinci-nav1 .col .siz {
+    display: flex;
+
+}
+
+@media (max-width: 750px) {
+    .birinci-nav1 .col .siz {
+        flex-direction: column;
+        align-items: center;
+    }
+    .birinci-nav1 .col .siz .text {
+        text-align: center;
+    }
+    .birinci-nav1 .col .siz i {
+        margin-bottom: 10px ;
+    }
+}
+
+
+
+.birinci-nav1 .col .siz .text {
+    margin-bottom: 40px ;
+    flex: 1;
+
+
+}
+
+.birinci-nav1 .col .siz .text h3 {
+    margin-top: 0 ;
+    margin-bottom: 30px ;
+
+}
+
+.birinci-nav1 .col .siz .text p {
+    line-height: 1.6 ;
+}
+
+.birinci-nav1 .col .siz  i {
+    color: var(--main-color);
+    margin-right: 10px ;
+
+}
+
+.birinci-nav1 .col .kucuk-image img {
+    width: 260px ;
+    height: 350px ;
+
+}
+
+.birinci-nav1 .col .kucuk-image {
+    margin-left: 50px ;
+    position: relative;
+}
+
+
+.birinci-nav1 .col .kucuk-image::after {
+    content: "" ;
+    position: absolute;
+    width: 100px ;
+    height: calc(100% + 100px) ;
+    background-color: var(--sec-color);
+    top: -50px ;
+    right: 0 ;
+    z-index: -1;
+
+
+}
+
+@media (max-width: 1200px) {
+    .birinci-nav1 .col .kucuk-image {
+        display: none;
+    }
+
+}
+
+
+/************************************  ikinci *************************************/
+
+
+.ikinci {
+    text-align: center;
+    background-color: #fafafa ;
+    padding-top: 60px ;
+    padding-bottom: 60px ;
+
+
+}
+
+.ikinci .nav{
+    margin: auto auto 100px auto ;
+}
+
+.ikinci .nav .aaa {
+    margin: auto auto 100px auto ;
+}
+
+.ikinci .nav .aaa h2 {
+    color: #ebeced;
+    margin: 0 0 -30px 0 ;
+    font-size: 100px ;
+}
+
+.ikinci .nav .ikinci-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    grid-gap: 20px ;
+    padding: 0 30px ;
+
+}
+
+.ikinci .nav .ikinci-content .text {
+    text-align: left;
+    padding: 20px ;
+}
+
+.ikinci .nav .ikinci-content img {
+    width: 100%;
+    height: 250px ;
+}
+
+.ikinci .nav .ikinci-content .rel {
+    background-color: white;
+}
+
+.ikinci .nav .ikinci-content .rel h2 {
+    margin: 0 ;
+}
+
+.ikinci .nav .ikinci-content .rel p {
+    margin: 10px 0 0;
+    line-height: 1.6;
+
+}
+
+/***********************************  ucuncu  *********************/
+
+
+.ucuncu {
+    text-align: center ;
+    margin: 60px ;
+
+
+}
+
+.ucuncu .nav {
+    margin: auto;
+}
+
+.ucuncu .nav .aaa {
+    margin-top: 60px ;
+    margin-bottom: 60px ;
+}
+
+.ucuncu .nav .aaa h2 {
+    color: #ebeced;
+    margin: 0 0 -30px 0 ;
+    font-size: 100px ;
+}
+
+.ucuncu .nav .aaa p {
+    margin-top: -20px ;
+}
+
+
+
+.ucuncu .ucuncu-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+@media (max-width: 991px) {
+    .ucuncu .ucuncu-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+    }
+    .ucuncu .nav {
+        padding: 0 ;
+        margin: 0 ;
+    }
+    .ucuncu .ucuncu-content .image-ucuncu::before {
+        display: none;
+    }
+    .ucuncu .ucuncu-content .image-ucuncu::after {
+        display: none;
+    }
+    .ucuncu .ucuncu-content .text p ,
+    .ucuncu .ucuncu-content .text h3  {
+        text-align: center;
+    }
+
+
+
+
+}
+
+.ucuncu .nav {
+    padding: 0 60px ;
+
+}
+
+.ucuncu .ucuncu-content .image-ucuncu {
+    position: relative;
+    width: 250px;
+    height: 300px ;
+}
+
+/*@media (max-width: 1300px) {*/
+/*    .ucuncu .ucuncu-content .image-ucuncu {*/
+/*        display: none;*/
+/*    }*/
+/*    .ucuncu .ucuncu-content  {*/
+/*        text-align: center ;*/
+/*        display: flex;*/
+/*        flex-wrap: wrap;*/
+/*        justify-content: center;*/
+/*        align-items: center;*/
+/*        padding: 0 ;*/
+/*        margin: 0;*/
+/*    }*/
+/*}*/
+
+.ucuncu .ucuncu-content .image-ucuncu::before {
+    content: "";
+    position: absolute;
+    height: calc(100% + 100px);
+    background-color: #EBECED;
+    width: 100px;
+    top: -50px;
+    left: -30px;
+    z-index: -1;
+}
+
+.ucuncu .ucuncu-content .image-ucuncu::after {
+    content: "";
+    position: absolute;
+    border-left: var(--main-color) solid 70px ;
+    border-bottom: var(--main-color) solid 70px;
+    width: 120px ;
+    height: 200px ;
+    top: -30px;
+    right: -150px;
+    z-index: -1;
+}
+
+
+
+.ucuncu .ucuncu-content .image-ucuncu img {
+    max-width: 100% ;
+    height: 100% ;
+}
+
+.ucuncu .ucuncu-content .text {
+    flex-basis: calc(100% - 500px);
+    text-align: left;
+
+
+
+
+
+}
+
+.ucuncu .ucuncu-content .text h3 {
+    color: #334752 ;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 50px ;
+
+}
+
+.ucuncu .ucuncu-content .text hr {
+    width: 50%;
+    border-color: var(--main-color);
+    display: inline-block;
+}
+
+.ucuncu .ucuncu-content .text p {
+    line-height: 1.6 ;
+}
+
+
+/*dorduncu*/
+
+.dorduncu {
+    background-color: #fafafa ;
+
+}
+
+.dorduncu .nav {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center ;
+    margin-bottom: 25px ;
+}
+
+.dorduncu .nav .baslangic h2 {
+    padding-top: 40px ;
+    font-size: 80px ;
+    color: #ebeced;
+}
+
+.dorduncu .nav .baslangic p {
+    margin-top: -100px ;
+}
+
+.dorduncu .nav .dorduncu-content {
+    margin-top: 60px ;
+}
+
+.dorduncu .nav .dorduncu-content h3 {
+    color: #2c4755 ;
+    font-size: 35px ;
+    letter-spacing: -2px ;
+    margin: 0 0 20px ;
+}
+
+.dorduncu .nav .dorduncu-content a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 30px ;
+}
+
+.dorduncu .nav .dorduncu-content .iler {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px ;
+
+}
+
+.dorduncu .nav .dorduncu-content p {
+    margin: 0 ;
+    font-size: 15px ;
+}
+
+.dorduncu .nav .dorduncu-content i {
+    margin-left: 20px ;
+    font-size: 25px ;
+}
+
+@media (max-width: 767px) {
+    .dorduncu .nav .dorduncu-content h3 ,
+    .dorduncu .nav .dorduncu-content a {
+        font-size: 25px ;
+    }
+}
+
+
+/*footer*/
+
+
+.footer {
+    background-color: #2c4755 ;
+    color: white;
+    padding: 30px 10px ;
+    text-align: center;
+    font-size: 18px ;
+}
+
+.footer span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+
+@media (min-width: 768px) {
+    .nav {
+        width: 750px ;
+
+    }
+}
+
+@media (min-width: 992px) {
+    .nav {
+        width: 970px ;
+    }
+}
+
+@media (min-width: 1200px) {
+    .nav {
+        width: 1170px ;
+    }
+}
